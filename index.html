@@ -1,51 +1,31 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>API Example | Don Bedwell</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Giphy API Example">
-		<meta name="author" content="Don Bedwell">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="assets/css/css.css">
-	</head>
-	
-	<body>
-		<div class="container">
-			<div class="row">
-				<header class="col col-md-12">
-				</header>
-			</div>
-			
-			<div class="row">
-				<main class="col col-md-12 text-center">
-				</main>
-			</div>
-			
-			<div class="row">
-				<footer class="col col-md-12">
-				</footer>
-			</div>
-		</div>
-	</body>
-	<script>
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=yoda&limit=20&rating=r&api_key=dc6zaTOxFJmzC";
-		
-		$(function(){
-			$.ajax({
-				url: queryURL,
-				method: 'GET',
-			}).done(function(data){
-			console.log(data);
-			$.each(data.data, function(i){
-				var img = data.data[i].images.fixed_height.url;
-				$('main').append('<img class="text-center" src="' + img + '">');
-			})
-			});
-		});
-		
-		
-	</script>
+<html lang="en">
+  <head>
+      <title>API Example | Don Bedwell</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Giphy API Example">
+      <meta name="author" content="Don Bedwell">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Time Travel Giphy Style!</h1>
+
+      <div id="buttons-view"></div>
+
+      <form id="giphy-form">
+        <label for="giphy-input">Add Time Travel Search</label>
+        <input type="text" id="giphy-input"><br>
+        <input id="add-giphy" type="submit" value="Add a Destination">
+      </form>
+
+      <div id="giphys-view"></div>
+    </div>
+  </body>
+  <script src="assets/js/js.js"></script>
 </html>

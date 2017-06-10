@@ -1,0 +1,42 @@
+body { 
+  background: url(../img/bg.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color:#fff;
+}
+
+button{
+	margin:6px;
+}
+
+#giphy-form{
+	margin:10px;
+}
+
+figcaption{
+	text-transform: uppercase;
+}
+
+input{
+	color:#000;
+}
+
+#add-giphy{
+	margin:24px;
+  background: #3498db;
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+#add-giphy:hover {
+  background: #2873a1;
+  text-decoration: none;
+}
